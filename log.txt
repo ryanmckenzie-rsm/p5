@@ -1,0 +1,297 @@
+############################
+#                          #
+#         numMixer         #
+#   Overloaded Operators   #
+#                          #
+############################
+
+== "nm1" STATS ==
+stateChangeCount: 0
+countDown: 14
+evenValid: True
+oddValid: True
+dataset: 
+42
+45
+16
+15
+83
+30
+10
+21
+52
+16
+controllerState: MIX
+
+== "nm2" STATS ==
+stateChangeCount: 0
+countDown: 14
+evenValid: True
+oddValid: True
+dataset: 
+11
+57
+3
+39
+63
+79
+99
+24
+65
+61
+controllerState: MIX
+
+== "nm2Copy" STATS ==
+stateChangeCount: 0
+countDown: 14
+evenValid: True
+oddValid: True
+dataset: 
+11
+57
+3
+39
+63
+79
+99
+24
+65
+61
+controllerState: MIX
+
+nm1 and nm2 are different
+nm2 and nm2Copy are the same
+nm1 is not comparable to nm2
+
+== "nm1 + nm2" STATS ==
+stateChangeCount: 0
+countDown: 28
+evenValid: True
+oddValid: True
+dataset: 
+42
+45
+16
+15
+83
+30
+10
+21
+52
+16
+11
+57
+3
+39
+63
+79
+99
+24
+65
+61
+controllerState: MIX
+
+############################
+#                          #
+#          dubMix          #
+#   Overloaded Operators   #
+#                          #
+############################
+
+============================
+== "dm1" STATS ==
+ctl: 3
+
+== "x" STATS ==
+stateChangeCount: 1
+countDown: 11
+evenValid: True
+oddValid: True
+controllerState: EVEN
+
+== "z" STATS ==
+stateChangeCount: 1
+countDown: 11
+evenValid: True
+oddValid: True
+controllerState: ODD
+============================
+
+============================
+== "dm2" STATS ==
+ctl: 3
+
+== "x" STATS ==
+stateChangeCount: 1
+countDown: 19
+evenValid: True
+oddValid: True
+controllerState: EVEN
+
+== "z" STATS ==
+stateChangeCount: 1
+countDown: 13
+evenValid: True
+oddValid: True
+controllerState: ODD
+============================
+
+============================
+== "dm2Copy" STATS ==
+ctl: 3
+
+== "x" STATS ==
+stateChangeCount: 1
+countDown: 19
+evenValid: True
+oddValid: True
+controllerState: EVEN
+
+== "z" STATS ==
+stateChangeCount: 1
+countDown: 13
+evenValid: True
+oddValid: True
+controllerState: ODD
+============================
+
+dm1 and dm2 are different
+dm2 and dm2Copy are the same
+dm1 is less than dm2
+
+============================
+== "dm1 + dm2" STATS ==
+ctl: 3
+
+== "x" STATS ==
+stateChangeCount: 2
+countDown: 30
+evenValid: True
+oddValid: True
+controllerState: EVEN
+
+== "z" STATS ==
+stateChangeCount: 2
+countDown: 24
+evenValid: True
+oddValid: True
+controllerState: ODD
+============================
+
+############################
+#                          #
+#         multiMix         #
+#   Overloaded Operators   #
+#                          #
+############################
+
+============================
+== "mm1" STATS ==
+Stack size: 1
+
+== "index [0]" STATS ==
+stateChangeCount: 0
+countDown: 10
+evenValid: True
+oddValid: True
+controllerState: MIX
+============================
+
+============================
+== "mm2" STATS ==
+Stack size: 2
+
+== "index [1]" STATS ==
+stateChangeCount: 0
+countDown: 15
+evenValid: True
+oddValid: True
+controllerState: MIX
+
+== "index [0]" STATS ==
+stateChangeCount: 0
+countDown: 12
+evenValid: True
+oddValid: True
+controllerState: MIX
+============================
+
+============================
+== "mm2Copy" STATS ==
+Stack size: 2
+
+== "index [1]" STATS ==
+stateChangeCount: 0
+countDown: 15
+evenValid: True
+oddValid: True
+controllerState: MIX
+
+== "index [0]" STATS ==
+stateChangeCount: 0
+countDown: 12
+evenValid: True
+oddValid: True
+controllerState: MIX
+============================
+
+mm1 and mm2 are different
+mm2 and mm2Copy are the same
+mm1 is less than mm2
+
+============================
+== "mm1 + mm2" STATS ==
+Stack size: 3
+
+== "index [2]" STATS ==
+stateChangeCount: 0
+countDown: 15
+evenValid: True
+oddValid: True
+controllerState: MIX
+
+== "index [1]" STATS ==
+stateChangeCount: 0
+countDown: 12
+evenValid: True
+oddValid: True
+controllerState: MIX
+
+== "index [0]" STATS ==
+stateChangeCount: 0
+countDown: 10
+evenValid: True
+oddValid: True
+controllerState: MIX
+============================
+
+############################
+#                          #
+#         multiMix         #
+#  Mixed-Mode Arithmetic   #
+#                          #
+############################
+
+============================
+== "mm1" STATS ==
+Stack size: 0
+============================
+
+== "nm1" STATS ==
+stateChangeCount: 0
+countDown: 11
+evenValid: True
+oddValid: True
+controllerState: MIX
+
+============================
+== "mm1 += nm1" STATS ==
+Stack size: 1
+
+== "index [0]" STATS ==
+stateChangeCount: 0
+countDown: 11
+evenValid: True
+oddValid: True
+controllerState: MIX
+============================
